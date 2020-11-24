@@ -5,7 +5,7 @@ curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
 sudo apt install brave-browser apt-transport-https curl gnupg synaptic conky conkymanager htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  celluloid halo speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra -y
-sudo apt install openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-toolbleachbit pdfsam openssh-server -y
+sudo apt install openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-toolbleachbit pdfsam openssh-server sysfsutils -y
 
 #Configure Openssh-server
 sudo systemctl enable ssh
@@ -50,6 +50,13 @@ exodus.io
 daedalus
 vscode
 https://code.visualstudio.com/Download
+
+
+#Configure Xbox Controller
+https://www.youtube.com/watch?v=bAI4vnlQhPg
+sudo apt install sysfsutils
+sudo nano /etc/sysfs.conf
+place the following at the end of the file. "/module/bluetooth/parameters/disable_ertm=1"
 
 #Google search to add these AppImage images.
 balenaEtcher
