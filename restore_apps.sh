@@ -1,5 +1,12 @@
 #!/usr/bin/bash
 ```
+###################################################
+###################################################
+##########      Author: Adrian D. Moseley
+##########      E-mail: adrian.moseley@gmail.com
+##########      twitter: @adrianmoseley
+###################################################
+###################################################
 Other configuration items not handled by script:
 
 - How to Change the GDM Background on Ubuntu
@@ -19,6 +26,9 @@ Other configuration items not handled by script:
 - Horizon View Client
     https://www.vmware.com/go/viewclients
 
+- Configure and Install RetroPi Game emulator
+    https://markontech.com/linux/how-to-install-retropie-on-ubuntu-tutorial/
+
 - Configure Xbox One S Controller
     https://www.youtube.com/watch?v=bAI4vnlQhPg
     sudo apt install sysfsutils
@@ -36,6 +46,8 @@ Other configuration items not handled by script:
 
 - VScode
     https://code.visualstudio.com/Download
+###################################################
+###################################################
 ```
 
 #Add ODS Studio PPA
