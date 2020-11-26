@@ -6,6 +6,11 @@
 ##########      twitter: @adrianmoseley
 ###################################################
 ###################################################
+##  Install and configure Ubuntu 20.10
+##
+##
+###################################################
+###################################################
 ##	Other configuration items not handled by script:
 ##	
 ##	- How to Change the GDM Background on Ubuntu
@@ -17,6 +22,10 @@
 ##	- AppImage Apps    
 ##	    balenaEtcher
 ##	    ClipGrab
+##                clipgrab - Not working, need new ppa
+##                sudo add-apt-repository ppa:clipgrab-team/ppa
+##                sudo apt-get update && sudo apt-get upgrade
+##                sudo apt-get install clipgrab
 ##	    OpenShot
 ##	    RawTherapee
 ##	    okular
@@ -45,6 +54,11 @@
 ##	
 ##	- VScode
 ##	    https://code.visualstudio.com/Download
+##
+##  -Dropbox
+##      echo "deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu $(lsb_release -sc) main"|sudo tee /etc/apt/sources.list.d/dropbox.list
+##      sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+##
 ###################################################
 ###################################################
 
@@ -62,6 +76,11 @@ clear
 echo "$(tput setaf 1)$(tput setab 7)Adding the ODS Studio PPA Repo...$(tput sgr 0)"
 sudo add-apt-repository ppa:obsproject/obs-studio
 clear
+
+#Add Microsoft VS Code
+#wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+#sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+#sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 
 #AppImageLauncher to manage appimage Based Apps
 #https://github.com/TheAssassin/AppImageLauncher
@@ -111,7 +130,4 @@ clear
 
 echo "$(tput setaf 1)$(tput setab 7)Download Git Repo for restore_app.sh..$(tput sgr 0)"
 echo "Use: git clone https://github.com/admoseley/NewUbuntuSetup.git"
-#clipgrab - Not working, need new ppa
-#sudo add-apt-repository ppa:clipgrab-team/ppa
-#sudo apt-get update && sudo apt-get upgrade
-#sudo apt-get install clipgrab
+
