@@ -80,6 +80,13 @@ echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable ma
 sudo apt update && sudo apt upgrade -y
 clear
 
+
+#Add Google Chrome
+echo "$(tput setaf 1)$(tput setab 7)Install Google Chrome...$(tput sgr 0)"
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+clear
+
 #Install Apps
 echo "$(tput setaf 1)$(tput setab 7)Install all favorite apps...$(tput sgr 0)"
 sudo apt install brave-browser apt-transport-https gnupg synaptic htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  celluloid speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-tool bleachbit pdfsam openssh-server sysfsutils appimagelauncher git yakuake timeshift -y
