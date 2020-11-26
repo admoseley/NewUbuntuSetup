@@ -126,6 +126,11 @@ sudo snap install bitcoin-core bashtop cointop cryptoinfo snap-store
 sudo snap install slack --classic
 clear
 
+#Install Dropbox
+echo "$(tput setaf 1)$(tput setab 7)Install Dropbox...$(tput sgr 0)"
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+~/.dropbox-dist/dropboxd
+
 #Configure Openssh-server
 echo "$(tput setaf 1)$(tput setab 7)Enable SSH Server...$(tput sgr 0)"
 sudo systemctl enable ssh

@@ -21,6 +21,7 @@
 - [x] Install [screenFetch](https://github.com/KittyKatt/screenFetch)
 - [x] Install Conky
 - [ ] Install ConkyManager
+- [ ] Install [Dropbox](https://www.dropbox.com/install)
 - [ ] Install [Powershell Core](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7.1#snap-package)
 
 ### Configurations:
