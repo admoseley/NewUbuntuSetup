@@ -49,23 +49,23 @@
 ###################################################
 
 #Add Ubuntu Repo
-echo "Adding the Ubuntu universe repo:"
+echo "$(tput setaf 1)$(tput setab 7)Adding the Ubuntu universe repo...$(tput sgr 0)"
 sudo add-apt-repository universe
 clear
 
 #add canocial partners
-echo "Adding Canonical Partners"
+echo "$(tput setaf 1)$(tput setab 7)Adding Canonical Partners...$(tput sgr 0)"
 sudo add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
 clear
 
 #Add ODS Studio PPA
-echo "Adding the ODS Studio PPA Repo:"
+echo "$(tput setaf 1)$(tput setab 7)Adding the ODS Studio PPA Repo...$(tput sgr 0)"
 sudo add-apt-repository ppa:obsproject/obs-studio
 clear
 
 #AppImageLauncher to manage appimage Based Apps
 #https://github.com/TheAssassin/AppImageLauncher
-echo "Adding the AppImageLauncher repo"
+echo "$(tput setaf 1)$(tput setab 7)Adding the AppImageLauncher repo...$(tput sgr 0)"
 sudo add-apt-repository ppa:appimagelauncher-team/stable
 clear
 
@@ -73,7 +73,7 @@ clear
 #sudo add-apt-repository ppa:linuxmint-tr/araclar
 
 #Add Brave Browser Repo
-echo "Install curl and Brave Browser repo:"
+echo "$(tput setaf 1)$(tput setab 7)Install curl and Brave Browser repo...$(tput sgr 0)"
 sudo apt install curl
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
@@ -81,21 +81,28 @@ sudo apt update && sudo apt upgrade -y
 clear
 
 #Install Apps
-echo "Install all favorite apps"
+echo "$(tput setaf 1)$(tput setab 7)Install all favorite apps...$(tput sgr 0)"
 sudo apt install brave-browser apt-transport-https gnupg synaptic htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  celluloid speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-tool bleachbit pdfsam openssh-server sysfsutils appimagelauncher git -y
-
+clear
 
 #Gnome Extensions
+echo "$(tput setaf 1)$(tput setab 7)Install Gnome Extensions...$(tput sgr 0)"
 sudo apt install $(apt search gnome-shell-extension | grep ^gnome | cut -d / -f1) -y
+clear
 
 #Add Snap based programs
+echo "$(tput setaf 1)$(tput setab 7)Install Snap Based Apps...$(tput sgr 0)"
 sudo snap install bitcoin-core bashtop cointop cryptoinfo snap-store
 sudo snap install slack --classic
+clear
 
 #Configure Openssh-server
+echo "$(tput setaf 1)$(tput setab 7)Enable SSH Server...$(tput sgr 0)"
 sudo systemctl enable ssh
 sudo systemctl start ssh
+clear
 
+echo "$(tput setaf 1)$(tput setab 7)Download Git Repo for restore_app.sh..$(tput sgr 0)"
 cd ~
 mkdir Development
 cd Development
