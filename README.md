@@ -37,3 +37,4 @@
 - [ ] Git Clone of [change-gdm-background](https://github.com/thiggy01/change-gdm-background)
 - [ ] Git Clone of [NewUbuntuSetup](https://github.com/admoseley/NewUbuntuSetup)
 - [ ] Restore conky settings
+- [ ] Horzion View Client link files
