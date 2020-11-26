@@ -2,13 +2,12 @@
 ## Installer script setup for Ubuntu 20.10
 
 ### Applications Added:
-- [x] Install Google Chrome browser
-- [x] Install Brave browser
-- [x] Install OBS Studio
-- [ ] Install RetroPi
+- [x] Install [Google Chrome browser](https://www.google.com/chrome/)
+- [x] Install [Brave browser](https://brave.com/download/)
+- [x] Install [OBS Studio](https://obsproject.com/)
+- [ ] Install [RetroPi](https://retropie.org.uk/docs/Debian/)
 - [x] Install Slack
-- [x] Install SpeedCrunch
-    * [Speedcrunch Website](https://speedcrunch.org/)
+- [x] Install [SpeedCrunch](https://speedcrunch.org/)
 - [ ] Install VSCode
 
 
@@ -18,8 +17,8 @@
 - [x] Install Snap Package Manager and Snap Store
 - [x] Install AppImageLauncher (to manage appimage file types)
 - [x] Install Python3 and pip
-- [x] Install GoLang
-- [x] Install screenfetch
+- [x] Install [GoLang](https://golang.org/)
+- [x] Install [screenFetch](https://github.com/KittyKatt/screenFetch)
 - [x] Install Conky
 - [ ] Install ConkyManager
 
