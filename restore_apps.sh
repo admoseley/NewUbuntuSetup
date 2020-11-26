@@ -138,3 +138,8 @@ clear
 echo "$(tput setaf 1)$(tput setab 7)Download Git Repo for restore_app.sh..$(tput sgr 0)"
 echo "Use: git clone https://github.com/admoseley/NewUbuntuSetup.git"
 
+#Links to address fix with Horizon View Client
+# https://www.reddit.com/r/vmware/comments/etb2r4/failures_installing_vmware_horizon_client_for/
+sudo ln -s /usr/lib/x86_64-linux-gnu/libgstreamer-1.0.so.0 /usr/lib/x86_64-linux-gnu/libgstreamer-0.10.so.0
+sudo ln -s /usr/lib/x86_64-linux-gnu/libgstapp-1.0.so.0 /usr/lib/x86_64-linux-gnu/libgstapp-0.10.so.0
+sudo ln -s /usr/lib/x86_64-linux-gnu/libgstbase-1.0.so.0 /usr/lib/x86_64-linux-gnu/libgstbase-0.10.so.0
