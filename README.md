@@ -1,5 +1,3 @@
-# NewUbuntuSetup
-
 # New Ubuntu Setup Script (bash)
 ## Installer script setup for Ubuntu 20.10
 
@@ -9,14 +7,14 @@
 - [x] Install SSH Server and enable
 - [x] Install OBS Studio
 - [x] Install RetroPi
-- [] Install VSCode
+- [ ] Install VSCode
 
 ## Utilities:
 - [x] Install Gnome Extensions
 - [x] Install Ubuntu Tweak Tool
 - [x] Install Snap Package Manager and Snap Store
 - [x] Install AppImageLauncher (to manage appimage file types)
-- [] Install ConkyManager
+- [ ] Install ConkyManager
 
 ## Configurations:
 - [x] Add Ubunutu Universe repository
