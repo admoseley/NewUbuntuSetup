@@ -8,7 +8,7 @@
 - [ ] Install [RetroPi](https://retropie.org.uk/docs/Debian/)
 - [x] Install Slack
 - [x] Install [SpeedCrunch](https://speedcrunch.org/)
-- [ ] Install VSCode
+- [ ] Install [VSCode](https://code.visualstudio.com/docs/setup/linux)
 
 
 ### Utilities:
@@ -21,8 +21,11 @@
 - [x] Install [screenFetch](https://github.com/KittyKatt/screenFetch)
 - [x] Install Conky
 - [ ] Install ConkyManager
+- [ ] Install [Powershell Core](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7.1#snap-package)
 
 ### Configurations:
 - [x] Add Ubunutu Universe repository
 - [x] Add Canocial Partners repository
 - [x] Enable and Start SSH Server
+- [ ] Restore git.config
+- [ ] Microsoft Xbox OneS Controller bluetooth setting
