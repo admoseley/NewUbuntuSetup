@@ -28,4 +28,4 @@
 - [x] Add Canocial Partners repository
 - [x] Enable and Start SSH Server
 - [ ] Restore git.config
-- [ ] Microsoft Xbox OneS Controller bluetooth setting
+- [ ] Microsoft Xbox OneS Controller [bluetooth fix](https://www.youtube.com/watch?v=bAI4vnlQhPg)
