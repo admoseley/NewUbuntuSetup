@@ -54,6 +54,9 @@ sudo add-apt-repository universe
 clear
 
 #add canocial partners
+echo "Adding Canonical Partners"
+sudo add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
+clear
 
 #Add ODS Studio PPA
 echo "Adding the ODS Studio PPA Repo:"
