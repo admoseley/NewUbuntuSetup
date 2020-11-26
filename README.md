@@ -8,7 +8,7 @@
 - [ ] Install RetroPi
 - [x] Install Slack
 - [x] Install SpeedCrunch
-    *[Speedcrunch Website](https://speedcrunch.org/)
+    * [Speedcrunch Website](https://speedcrunch.org/)
 - [ ] Install VSCode
 
 
