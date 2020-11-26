@@ -82,7 +82,7 @@ clear
 
 #Install Apps
 echo "$(tput setaf 1)$(tput setab 7)Install all favorite apps...$(tput sgr 0)"
-sudo apt install brave-browser apt-transport-https gnupg synaptic htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  celluloid speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-tool bleachbit pdfsam openssh-server sysfsutils appimagelauncher git -y
+sudo apt install brave-browser apt-transport-https gnupg synaptic htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  celluloid speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-tool bleachbit pdfsam openssh-server sysfsutils appimagelauncher git yakuake timeshift -y
 clear
 
 #Gnome Extensions
@@ -103,10 +103,7 @@ sudo systemctl start ssh
 clear
 
 echo "$(tput setaf 1)$(tput setab 7)Download Git Repo for restore_app.sh..$(tput sgr 0)"
-cd ~
-mkdir Development
-cd Development
-git clone https://github.com/admoseley/NewUbuntuSetup.git
+echo "Use: git clone https://github.com/admoseley/NewUbuntuSetup.git"
 #clipgrab - Not working, need new ppa
 #sudo add-apt-repository ppa:clipgrab-team/ppa
 #sudo apt-get update && sudo apt-get upgrade
