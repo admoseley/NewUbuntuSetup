@@ -1,5 +1,4 @@
 #!/usr/bin/bash
-```
 ###################################################
 ###################################################
 ##########      Author: Adrian D. Moseley
@@ -7,6 +6,7 @@
 ##########      twitter: @adrianmoseley
 ###################################################
 ###################################################
+```
 Other configuration items not handled by script:
 
 - How to Change the GDM Background on Ubuntu
@@ -46,43 +46,48 @@ Other configuration items not handled by script:
 
 - VScode
     https://code.visualstudio.com/Download
-###################################################
-###################################################
 ```
+###################################################
+###################################################
+
+#Add Ubuntu Repo
+sudo add-apt-repository universe
+
+#add canocial partners
 
 #Add ODS Studio PPA
 sudo add-apt-repository ppa:obsproject/obs-studio
+
+#AppImageLauncher to manage appimage Based Apps
+#https://github.com/TheAssassin/AppImageLauncher
+sudo add-apt-repository ppa:appimagelauncher-team/stable
+
+#Add ConkyManager not working
+#sudo add-apt-repository ppa:linuxmint-tr/araclar
+
+
 sudo apt install curl -y
 
 #Add Brave Browser Repo
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
+sudo apt update && sudo apt upgrade -y
 
 #Install Apps
-sudo apt install brave-browser apt-transport-https gnupg synaptic conky conkymanager htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  celluloid halo speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra curl -y
-sudo apt install openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-toolbleachbit pdfsam openssh-server sysfsutils -y
-
-
-#Configure Openssh-server
-sudo systemctl enable ssh
-sudo systemctl start ssh
+sudo apt install brave-browser apt-transport-https gnupg synaptic htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  celluloid speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-toolbleachbit pdfsam openssh-server sysfsutils -y
 
 #Gnome Extensions
-sudo add-apt-repository universe
-sudo apt install $(apt search gnome-shell-extension | grep ^gnome | cut -d / -f1)
+sudo apt install $(apt search gnome-shell-extension | grep ^gnome | cut -d / -f1) -y
 
 #Add Snap based programs
 sudo snap install bitcoin-core bashtop cointop cryptoinfo snap-store
 sudo snap install slack --classic
 
-#clipgrab
-sudo add-apt-repository ppa:clipgrab-team/ppa
-sudo apt-get update && sudo apt-get upgrade
-sudo apt-get install clipgrab
+#Configure Openssh-server
+sudo systemctl enable ssh
+sudo systemctl start ssh
 
-#AppImageLauncher to manage Snap Based Apps
-#https://github.com/TheAssassin/AppImageLauncher
-sudo add-apt-repository ppa:appimagelauncher-team/stable
-sudo apt-get update
-sudo apt install AppImageLauncher -y
+#clipgrab - Not working, need new ppa
+#sudo add-apt-repository ppa:clipgrab-team/ppa
+#sudo apt-get update && sudo apt-get upgrade
+#sudo apt-get install clipgrab
