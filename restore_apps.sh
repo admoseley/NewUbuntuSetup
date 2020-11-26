@@ -65,16 +65,14 @@ sudo add-apt-repository ppa:appimagelauncher-team/stable
 #Add ConkyManager not working
 #sudo add-apt-repository ppa:linuxmint-tr/araclar
 
-
-sudo apt install curl -y
+#Install Apps
+sudo apt install brave-browser apt-transport-https gnupg synaptic htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  celluloid speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-toolbleachbit pdfsam openssh-server sysfsutils curl -y
 
 #Add Brave Browser Repo
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update && sudo apt upgrade -y
 
-#Install Apps
-sudo apt install brave-browser apt-transport-https gnupg synaptic htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  celluloid speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-toolbleachbit pdfsam openssh-server sysfsutils -y
 
 #Gnome Extensions
 sudo apt install $(apt search gnome-shell-extension | grep ^gnome | cut -d / -f1) -y
@@ -87,6 +85,10 @@ sudo snap install slack --classic
 sudo systemctl enable ssh
 sudo systemctl start ssh
 
+cd ~
+mkdir Development
+cd Development
+git clone https://github.com/admoseley/NewUbuntuSetup.git
 #clipgrab - Not working, need new ppa
 #sudo add-apt-repository ppa:clipgrab-team/ppa
 #sudo apt-get update && sudo apt-get upgrade
