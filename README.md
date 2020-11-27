@@ -32,6 +32,7 @@
 - [x] Add Canocial Partners repository
 - [x] Enable and Start SSH Server
 - [ ] Restore git.config
+- [ ] Restore git gpg key
 - [ ] Microsoft Xbox OneS Controller [bluetooth fix](https://www.youtube.com/watch?v=bAI4vnlQhPg)
 - [ ] Create Development home folder for git repos
 - [ ] Git Clone of [change-gdm-background](https://github.com/thiggy01/change-gdm-background)
