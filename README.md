@@ -39,3 +39,4 @@
 - [ ] Git Clone of [NewUbuntuSetup](https://github.com/admoseley/NewUbuntuSetup)
 - [ ] Restore conky settings
 - [ ] Horzion View Client link files
+- [ ] OpenVPN Configuration 
