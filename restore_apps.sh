@@ -101,6 +101,10 @@ echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable ma
 sudo apt update && sudo apt upgrade -y
 clear
 
+#Add Remmina (Remote Desktop Manager)
+sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
+sudo apt update
+sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret
 
 #Add Google Chrome
 echo "$(tput setaf 1)$(tput setab 7)Install Google Chrome...$(tput sgr 0)"
