@@ -146,6 +146,13 @@ sudo systemctl enable ssh
 sudo systemctl start ssh
 clear
 
+#Configure VPN Client
+sudo apt install openvpn
+sudo apt install network-manager-openvpn
+sudo systemctl start openvpn 
+sudo systemctl enable openvpn 
+sudo systemctl status openvpn
+
 echo "$(tput setaf 1)$(tput setab 7)Download Git Repo for restore_app.sh..$(tput sgr 0)"
 echo "Use: git clone https://github.com/admoseley/NewUbuntuSetup.git"
 
