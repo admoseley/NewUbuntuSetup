@@ -60,13 +60,20 @@
 ##
 ##  -MacOS Theme
 ##      https://www.omgubuntu.co.uk/2017/03/make-ubuntu-look-like-mac-5-steps
-##
+##  -gitconfig
+##      -GPG Key Signing
 ###################################################
 ###################################################
 
 #Add Ubuntu Repo
 echo "$(tput setaf 1)$(tput setab 7)Adding the Ubuntu universe repo...$(tput sgr 0)"
 sudo add-apt-repository universe
+sudo add-apt-repository ppa:gerardpuig/ppa
+sudo add-apt-repository ppa:marten-baert/simplescreenrecorder
+sudo add-apt-repository ppa:font-manager/staging
+sudo add-apt-repository ppa:notpadqq-team/notepadqq
+sudo add-apt-repository ppa:hluk/copyq
+sudo add-apt-repository ppa: qr-tools-developers/qr-tools-stable
 clear
 
 #add canocial partners
@@ -114,7 +121,7 @@ clear
 
 #Install Apps
 echo "$(tput setaf 1)$(tput setab 7)Install all favorite apps...$(tput sgr 0)"
-sudo apt install brave-browser apt-transport-https gnupg synaptic htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  celluloid speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-tool bleachbit pdfsam openssh-server sysfsutils appimagelauncher git yakuake timeshift libxml2-utils -y
+sudo apt install brave-browser apt-transport-https gnupg synaptic htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-tool bleachbit pdfsam openssh-server sysfsutils appimagelauncher git yakuake timeshift libxml2-utils ubuntu-cleaner simplescreenrecorder nautilus-dropbox font-manager notepadqq copyq qtqr glogg -y
 clear
 
 #Gnome Extensions
@@ -129,9 +136,9 @@ sudo snap install slack --classic
 clear
 
 #Install Dropbox
-echo "$(tput setaf 1)$(tput setab 7)Install Dropbox...$(tput sgr 0)"
-cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-~/.dropbox-dist/dropboxd
+#echo "$(tput setaf 1)$(tput setab 7)Install Dropbox...$(tput sgr 0)"
+#cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+#~/.dropbox-dist/dropboxd
 
 #Configure Openssh-server
 echo "$(tput setaf 1)$(tput setab 7)Enable SSH Server...$(tput sgr 0)"

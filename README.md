@@ -32,9 +32,11 @@
 - [x] Add Canocial Partners repository
 - [x] Enable and Start SSH Server
 - [ ] Restore git.config
+- [ ] Restore git [gpg key](https://medium.com/@ryanmillerc/use-gpg-signing-keys-with-git-on-windows-10-github-4acbced49f68)
 - [ ] Microsoft Xbox OneS Controller [bluetooth fix](https://www.youtube.com/watch?v=bAI4vnlQhPg)
 - [ ] Create Development home folder for git repos
 - [ ] Git Clone of [change-gdm-background](https://github.com/thiggy01/change-gdm-background)
 - [ ] Git Clone of [NewUbuntuSetup](https://github.com/admoseley/NewUbuntuSetup)
 - [ ] Restore conky settings
 - [ ] Horzion View Client link files
+- [ ] OpenVPN Configuration 
