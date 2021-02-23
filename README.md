@@ -22,6 +22,7 @@
 - [x] Install [GoLang](https://golang.org/)
 - [x] Install [screenFetch](https://github.com/KittyKatt/screenFetch)
 - [x] Install Conky
+- [x] Install Remmina
 - [ ] Install ConkyManager (conky-lua)
 - [ ] Install [Dropbox](https://www.dropbox.com/install)
 - [ ] Install [Powershell Core](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7.1#snap-package)
@@ -39,4 +40,4 @@
 - [ ] Git Clone of [NewUbuntuSetup](https://github.com/admoseley/NewUbuntuSetup)
 - [ ] Restore conky settings
 - [ ] Horzion View Client link files
-- [ ] OpenVPN Configuration 
+- [ ] OpenVPN Configuration
