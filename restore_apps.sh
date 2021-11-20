@@ -61,6 +61,7 @@
 ##  -gitconfig
 ##      -GPG Key Signing
 ##      -update .gitconfig file with GPG keys
+##      -Enable signing
 ##
 ##  --App Outlet https://app-outlet.github.io/
 ###################################################
