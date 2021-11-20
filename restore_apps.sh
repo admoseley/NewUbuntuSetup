@@ -60,6 +60,7 @@
 ##      https://www.omgubuntu.co.uk/2017/03/make-ubuntu-look-like-mac-5-steps
 ##  -gitconfig
 ##      -GPG Key Signing
+##      -update .gitconfig file with GPG keys
 ##
 ##  --App Outlet https://app-outlet.github.io/
 ###################################################
