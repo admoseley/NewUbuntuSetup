@@ -123,7 +123,7 @@ clear
 
 #Install Apps
 echo "$(tput setaf 1)$(tput setab 7)Install all favorite apps...$(tput sgr 0)"
-sudo apt install brave-browser apt-transport-https gnupg synaptic htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-tool bleachbit pdfsam openssh-server sysfsutils appimagelauncher git yakuake timeshift libxml2-utils simplescreenrecorder nautilus-dropbox font-manager notepadqq copyq qtqr glogg -y
+sudo apt install brave-browser apt-transport-https gnupg gnupg2 synaptic htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-tool bleachbit pdfsam openssh-server sysfsutils appimagelauncher git yakuake timeshift libxml2-utils simplescreenrecorder nautilus-dropbox font-manager notepadqq copyq qtqr glogg -y
 clear
 
 #Gnome Extensions
