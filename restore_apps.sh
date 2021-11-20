@@ -50,8 +50,6 @@
 ##	- Daedalus
 ##	    https://daedaluswallet.io/
 ##	
-##	- VScode
-##	    https://code.visualstudio.com/Download
 ##
 ##  -Dropbox
 ##      echo "deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu $(lsb_release -sc) main"|sudo tee /etc/apt/sources.list.d/dropbox.list
@@ -62,31 +60,33 @@
 ##      https://www.omgubuntu.co.uk/2017/03/make-ubuntu-look-like-mac-5-steps
 ##  -gitconfig
 ##      -GPG Key Signing
+##
+##  --App Outlet https://app-outlet.github.io/
 ###################################################
 ###################################################
 
 #Add Ubuntu Repo
 echo "$(tput setaf 1)$(tput setab 7)Adding the Ubuntu universe repo...$(tput sgr 0)"
-sudo add-apt-repository universe
-sudo add-apt-repository ppa:gerardpuig/ppa
-sudo add-apt-repository ppa:marten-baert/simplescreenrecorder
-sudo add-apt-repository ppa:font-manager/staging
-sudo add-apt-repository ppa:notpadqq-team/notepadqq
-sudo add-apt-repository ppa:hluk/copyq
-sudo add-apt-repository ppa: qr-tools-developers/qr-tools-stable
+sudo add-apt-repository universe -y
+sudo add-apt-repository ppa:gerardpuig/ppa -y
+sudo add-apt-repository ppa:marten-baert/simplescreenrecorder -y
+sudo add-apt-repository ppa:font-manager/staging -y
+sudo add-apt-repository ppa:notpadqq-team/notepadqq -y
+sudo add-apt-repository ppa:hluk/copyq -y
+sudo add-apt-repository ppa: qr-tools-developers/qr-tools-stable -y
 clear
 
 #add canocial partners
 echo "$(tput setaf 1)$(tput setab 7)Adding Canonical Partners...$(tput sgr 0)"
-sudo add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
+sudo add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner" -y
 clear
 
 #Add ODS Studio PPA
 echo "$(tput setaf 1)$(tput setab 7)Adding the ODS Studio PPA Repo...$(tput sgr 0)"
-sudo add-apt-repository ppa:obsproject/obs-studio
+sudo add-apt-repository ppa:obsproject/obs-studio -y
 clear
 
-#Add Microsoft VS Code
+#Add Microsoft VS Code https://code.visualstudio.com/docs/setup/linux
 #wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 #sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
 #sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
@@ -94,7 +94,7 @@ clear
 #AppImageLauncher to manage appimage Based Apps
 #https://github.com/TheAssassin/AppImageLauncher
 echo "$(tput setaf 1)$(tput setab 7)Adding the AppImageLauncher repo...$(tput sgr 0)"
-sudo add-apt-repository ppa:appimagelauncher-team/stable
+sudo add-apt-repository ppa:appimagelauncher-team/stable -y
 clear
 
 #Add ConkyManager not working
@@ -109,9 +109,9 @@ sudo apt update && sudo apt upgrade -y
 clear
 
 #Add Remmina (Remote Desktop Manager)
-sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
+sudo apt-add-repository ppa:remmina-ppa-team/remmina-next -y
 sudo apt update
-sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret
+sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret -y
 
 #Add Google Chrome
 echo "$(tput setaf 1)$(tput setab 7)Install Google Chrome...$(tput sgr 0)"
@@ -121,7 +121,7 @@ clear
 
 #Install Apps
 echo "$(tput setaf 1)$(tput setab 7)Install all favorite apps...$(tput sgr 0)"
-sudo apt install brave-browser apt-transport-https gnupg synaptic htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-tool bleachbit pdfsam openssh-server sysfsutils appimagelauncher git yakuake timeshift libxml2-utils ubuntu-cleaner simplescreenrecorder nautilus-dropbox font-manager notepadqq copyq qtqr glogg -y
+sudo apt install brave-browser btop apt-transport-https gnupg synaptic htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-tool bleachbit pdfsam openssh-server sysfsutils appimagelauncher git yakuake timeshift libxml2-utils simplescreenrecorder nautilus-dropbox font-manager notepadqq copyq qtqr glogg -y
 clear
 
 #Gnome Extensions
@@ -136,9 +136,9 @@ sudo snap install slack --classic
 clear
 
 #Install Dropbox
-#echo "$(tput setaf 1)$(tput setab 7)Install Dropbox...$(tput sgr 0)"
-#cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-#~/.dropbox-dist/dropboxd
+echo "$(tput setaf 1)$(tput setab 7)Install Dropbox...$(tput sgr 0)"
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+~/.dropbox-dist/dropboxd &
 
 #Configure Openssh-server
 echo "$(tput setaf 1)$(tput setab 7)Enable SSH Server...$(tput sgr 0)"
