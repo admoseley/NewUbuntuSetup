@@ -76,6 +76,8 @@ sudo add-apt-repository ppa:font-manager/staging -y
 sudo add-apt-repository ppa:notpadqq-team/notepadqq -y
 sudo add-apt-repository ppa:hluk/copyq -y
 sudo add-apt-repository ppa: qr-tools-developers/qr-tools-stable -y
+# Install pre-requisite packages.
+sudo apt-get install -y wget apt-transport-https software-properties-common
 clear
 
 #add canocial partners
@@ -102,6 +104,17 @@ clear
 #Add ConkyManager not working
 #sudo add-apt-repository ppa:linuxmint-tr/araclar
 
+echo "$(tput setaf 1)$(tput setab 7)Install Microsoft Powershell 7...$(tput sgr 0)"
+# Download the Microsoft repository GPG keys
+wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
+# Register the Microsoft repository GPG keys
+sudo dpkg -i packages-microsoft-prod.deb
+# Update the list of packages after we added packages.microsoft.com
+sudo apt-get update
+# Install PowerShell
+sudo apt-get install -y powershell
+clear
+
 #Add Brave Browser Repo
 echo "$(tput setaf 1)$(tput setab 7)Install curl and Brave Browser repo...$(tput sgr 0)"
 sudo apt install curl
@@ -123,7 +136,7 @@ clear
 
 #Install Apps
 echo "$(tput setaf 1)$(tput setab 7)Install all favorite apps...$(tput sgr 0)"
-sudo apt install brave-browser apt-transport-https gnupg gnupg2 synaptic htop screenfetch synapse flameshot stacer snap peek  obs-studio python3 python3-pip golang  speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-tool bleachbit pdfsam openssh-server sysfsutils appimagelauncher git yakuake timeshift libxml2-utils simplescreenrecorder nautilus-dropbox font-manager notepadqq copyq qtqr glogg -y
+sudo apt install brave-browser apt-transport-https gnupg gnupg2 openvpn network-manager-openvpn synaptic htop screenfetch synapse flameshot stacer onlyoffice-desktopeditors snap peek  obs-studio python3 python3-pip golang  speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-tool bleachbit pdfsam openssh-server sysfsutils appimagelauncher git yakuake timeshift libxml2-utils simplescreenrecorder nautilus-dropbox font-manager notepadqq copyq qtqr glogg -y
 clear
 
 #Gnome Extensions
@@ -149,8 +162,6 @@ sudo systemctl start ssh
 clear
 
 #Configure VPN Client
-sudo apt install openvpn
-sudo apt install network-manager-openvpn
 sudo systemctl start openvpn 
 sudo systemctl enable openvpn 
 sudo systemctl status openvpn
