@@ -136,7 +136,7 @@ clear
 
 #Install Apps
 echo "$(tput setaf 1)$(tput setab 7)Install all favorite apps...$(tput sgr 0)"
-sudo apt install brave-browser apt-transport-https gnupg gnupg2 openvpn network-manager-openvpn synaptic htop screenfetch synapse flameshot stacer onlyoffice-desktopeditors snap peek  obs-studio python3 python3-pip golang  speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol gimp gparted preload gnome-tweak-tool bleachbit pdfsam openssh-server sysfsutils appimagelauncher git yakuake timeshift libxml2-utils simplescreenrecorder nautilus-dropbox font-manager notepadqq copyq qtqr glogg -y
+sudo apt install brave-browser apt-transport-https gnupg gnupg2 openvpn network-manager-openvpn synaptic htop screenfetch synapse flameshot stacer onlyoffice-desktopeditors snap peek  obs-studio python3 python3-pip golang  speedcrunch conky-all xscreensaver xscreensaver-gl-extra xscreensaver-data-extra appimagelauncher openshot glances okular simple-scan unity-tweak-tool gdebi pavucontrol tilix gimp gparted preload gnome-tweak-tool bleachbit pdfsam openssh-server sysfsutils appimagelauncher git yakuake timeshift libxml2-utils simplescreenrecorder nautilus-dropbox font-manager notepadqq copyq qtqr glogg -y
 clear
 
 #Gnome Extensions
@@ -161,6 +161,25 @@ sudo systemctl enable ssh
 sudo systemctl start ssh
 clear
 
+#Install Docker
+echo "$(tput setaf 1)$(tput setab 7)Install Docker...$(tput sgr 0)"
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+echo \
+"deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+clear
+
 #Configure VPN Client
 sudo systemctl start openvpn 
 sudo systemctl enable openvpn 
@@ -174,3 +193,5 @@ echo "Use: git clone https://github.com/admoseley/NewUbuntuSetup.git"
 sudo ln -s /usr/lib/x86_64-linux-gnu/libgstreamer-1.0.so.0 /usr/lib/x86_64-linux-gnu/libgstreamer-0.10.so.0
 sudo ln -s /usr/lib/x86_64-linux-gnu/libgstapp-1.0.so.0 /usr/lib/x86_64-linux-gnu/libgstapp-0.10.so.0
 sudo ln -s /usr/lib/x86_64-linux-gnu/libgstbase-1.0.so.0 /usr/lib/x86_64-linux-gnu/libgstbase-0.10.so.0
+
+sudo docker run hello-world
